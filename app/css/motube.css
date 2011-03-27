@@ -1,0 +1,177 @@
+/* v1.0 | 20080212 */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */:focus {
+    outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+	background-image:url("../img/bg.jpg");
+    color: white;
+    font-family: 'Lucida Grande', Verdana, Arial;
+    font-size: 12px;
+    margin: 0;
+}
+
+#container {
+    width: 100%;
+    height: 120%;
+    -webkit-perspective: 750; /* For compatibility with iPhone 3.0, we leave off the units here = distance [750] */
+    -webkit-perspective-origin: 50% 430px;
+}
+
+#stage {
+    width: 700px;
+    height: 120%;
+    -webkit-transition: -webkit-transform 2s;
+    -webkit-transform-style: preserve-3d;
+	left:140px;
+	position:absolute;
+}
+
+#shape {
+    position: relative;
+    top: 370px; /* 450 for the middle */
+    margin: 0 auto;
+    height: 160px;
+    width: 340px;
+    -webkit-transform-style: preserve-3d;
+    left: -700px;
+}
+
+#sidebar {
+	position:absolute;
+	height:100%;
+}
+
+.plane {
+    position: absolute;
+    height: 160px;
+    width: 340px;
+    border: 2px solid #ccccff;
+    -webkit-border-radius: 15px;
+    -webkit-box-sizing: border-box;
+    text-align: center;
+    color: black;
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #ffffff),color-stop(1, #999));
+	-webkit-box-shadow: 0px 0px 4px #ffffff;
+	-webkit-trans ition: -webkit-transform 2s, opacity 2s;
+	-webkit-backface-visibility: hidden;
+}
+.box_gradient {
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #444444),color-stop(1, #999999)); /* Saf4+, Chrome */
+}
+#shape.backfaces .plane {
+	-webkit-backface-visibility: visible;
+}
+#shape {
+	-webkit-transition-property: -webkit-transform, left;
+	-webkit-transition-duration: 1500ms, 1500ms;
+	-webkit-transition-timing-function : ease-out, ease-out;
+	-webkit-transition-delay: 0, 100ms;
+
+}
+.plane{
+	text-align: left;
+}
+.plane a{
+	-webkit-border-radius: 5px;
+	margin: 10px;
+	display: block;
+	float: left;
+}
+.plane img{
+	width:120px;
+	height:120px;
+	-webkit-border-radius: 5px;
+}
+h3{
+	color: #488fc6;
+	font-size: 22px;
+	padding: 0;
+	margin: 10px 0;
+	text-transform: uppercase;
+	font-family: Arial;
+}
+p{
+	font-family:"Georgia",Times,serif;
+	color: #333333;
+	font-size: 18px;
+	padding: 0em;
+	margin: 0em;
+}
+
+/** Nav **/
+
+#navigation ul {
+	width:140px;
+	height:100%;
+}
+
+#navigation ul li {
+	width:300px;
+	height:88px;
+	padding-top:30px;
+	position:relative;
+}
+
+#navigation ul li a {
+	width:300px;
+	height:88px;
+	background:url("../img/nav_button.jpg") left top no-repeat;
+	display:block;
+	color:#888;
+	text-decoration:none;
+	font-size:38px;
+	padding:22px;
+}
+
+#navigation ul li a:hover, #navigation ul li a:focus,  #navigation ul li a:active {
+	color:black;
+}
+
+#navigation ul li a#directory_up {
+	background:url("../img/button_up_dark.jpg") center top no-repeat;
+	width:300px;
+	height:110px;
+}
